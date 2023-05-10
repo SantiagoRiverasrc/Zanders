@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+
+:root {
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #06224d;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+html,
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Crimson Text', serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url('./img/car1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s ease;
+}
+
+
+.encabezado, .principal, .abajo{
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+.encabezado{
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.logo img{
+    margin-right: 1rem;
+}
+
+
+.navbar{
+    margin: 0;
+}
+
+.menu-item{
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 16px;
+}
+
+.menu-item:last-child{
+    margin: 0;
+    padding: 10px 12px;
+    background-color: var(--accent-color);
+}
+
+
+.principal{
+    max-width: var(--max-width);
+    flex-grow: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+.title-one{
+    font-size: 34px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.title-two{
+    font-size: 28px;
+    margin-top: 1rem;
+    margin-bottom: 1em;
+}
+
+.principal .button-item{
+    margin: 0;
+    padding: 10px 12px;
+    background-color: var(--accent-color);
+}
+
+
+
+.abajo-div{
+    background-color: black;
+}
+
+.abajo{
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.abajo-div{
+    font-size: 1rem;
+}
+
+.abajo-title{
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.abajo-texto{
+    margin: 0;
+}
+
+
+@media screen and (max-width:1280px) {
+    .encabezado, .abajo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .principal{
+        align-items: center;
+    }
+
+    .abajo-div{
+        margin-bottom: 1rem;
+    }
+
+    .menu-item:last-child{
+        margin-top: 10px;
+    }
+}
